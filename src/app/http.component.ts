@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpService} from './http.service';
+import {Response} from '@angular/http';
 
 @Component({
   selector: 'app-http',
@@ -6,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HttpComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpService: HttpService) { }
 
   ngOnInit() {
+    this.httpService.getData()
+      .subscribe(
+        (data: Response) => {
+          console.log('data', data);
+        }
+      );
   }
 
 }
