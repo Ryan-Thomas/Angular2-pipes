@@ -4,16 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { PipesComponent } from './pipes.component';
-import { DoublePipe } from './double.pipe';
-import { FilterPipe } from './filter.pipe';
+import { HttpComponent } from './http.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PipesComponent,
-    DoublePipe,
-    FilterPipe,
+    HttpComponent,
+    HttpComponent,
   ],
   imports: [
     BrowserModule,
