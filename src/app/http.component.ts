@@ -7,6 +7,7 @@ import {HttpService} from './http.service';
 })
 export class HttpComponent {
   items: any[] = [];
+  asyncString = this.httpService.getData();
 
   constructor(private httpService: HttpService) { }
 
